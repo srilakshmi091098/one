@@ -2,7 +2,7 @@
 #COPY tomcat-users.xml /usr/local/tomcat/conf
 #COPY target/*.war /usr/local/tomcat/webapps/myweb.war
 FROM nginx:latest
-
+COPY index.html /usr/share/nginx/html/index.html
 EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]
